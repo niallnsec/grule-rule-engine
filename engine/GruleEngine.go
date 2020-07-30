@@ -53,6 +53,7 @@ func (g *GruleEngine) Execute(dataCtx ast.IDataContext, knowledge *ast.Knowledge
 	defunc := &ast.BuiltInFunctions{
 		Knowledge:     knowledge,
 		WorkingMemory: knowledge.WorkingMemory,
+		DataContext:   dataCtx,
 	}
 	dataCtx.Add("DEFUNC", defunc)
 
